@@ -38,6 +38,11 @@ class Item {
 		return danok;
 	}
 
+	public double getCena() {
+		double tax = price * (danok / 100);
+		return price + tax;
+	}
+
 	double taxReturn () {
 		double tax = price * (danok / 100);
 		double taxReturn = tax * 0.15;
