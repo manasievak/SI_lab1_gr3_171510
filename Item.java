@@ -2,15 +2,45 @@ class Item {
 	int id;
 	String name;
 	double price;
-	double danok;
+	double danok; // e.g. 5%
 
-	//TODO add variable.
+	public Item() {
+	}
 
-	//TODO constructor
+	public void setId(int id) {
+		this.id = id;
+	}
 
-	//TODO setters and getters
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public void setDanok(double danok) {
+		this.danok = danok;
+	}
+	public int getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public double getDanok() {
+		return danok;
+	}
 
 	double taxReturn () {
-		//TODO
+		double tax = price * (danok / 100);
+		double taxReturn = tax * 0.15;
+		return taxReturn;
 	}
 }
